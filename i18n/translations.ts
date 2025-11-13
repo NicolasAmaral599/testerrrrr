@@ -39,11 +39,6 @@ export const translations: Record<string, any> = {
         subtitle: 'Agora você pode acessar o site normalmente.',
         button: 'Voltar para o site',
     },
-    emailConfirm: {
-        title: 'Seu e-mail foi autenticado!',
-        subtitle: 'Agora você pode acessar o site normalmente.',
-        button: 'Voltar para o site',
-    },
     dashboard: {
       title: 'Dashboard',
       totalBilled: 'Total Faturado',
@@ -257,11 +252,6 @@ export const translations: Record<string, any> = {
     },
     authConfirm: {
         title: 'Your email has been authenticated!',
-        subtitle: 'You can now access the site normally.',
-        button: 'Back to site',
-    },
-    emailConfirm: {
-        title: 'Your email has been confirmed!',
         subtitle: 'You can now access the site normally.',
         button: 'Back to site',
     },

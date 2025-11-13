@@ -20,7 +20,6 @@ import { useInvoicesRealtime } from './hooks/useInvoicesRealtime';
 import { createInvoiceSupabase, updateInvoiceSupabase, deleteInvoiceSupabase, generateUUID } from './services/supabaseService';
 import Login from './components/Login';
 import AuthConfirmedPage from './components/AuthConfirmedPage';
-import EmailConfirmedPage from './components/EmailConfirmedPage';
 
 
 const App: React.FC = () => {
@@ -171,14 +170,6 @@ const App: React.FC = () => {
     }
   };
   
-  if (window.location.pathname === '/email-confirmed') {
-    return (
-      <LanguageProvider>
-        <EmailConfirmedPage />
-      </LanguageProvider>
-    );
-  }
-
   if (isAuthConfirmPage && !session) {
     return (
       <LanguageProvider>

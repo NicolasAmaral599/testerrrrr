@@ -42,7 +42,7 @@ const Login: React.FC = () => {
         data: {
           full_name: fullName,
         },
-        emailRedirectTo: 'https://autentica-o-nf.vercel.app/email-confirmed',
+        emailRedirectTo: `${window.location.origin}/auth-confirm`,
       },
     });
     if (error) {
