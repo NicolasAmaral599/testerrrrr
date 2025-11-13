@@ -42,8 +42,8 @@ const Login: React.FC = () => {
         data: {
           full_name: fullName,
         },
-        // Using a consistent path for all auth redirects. App.tsx handles both this and the Supabase default.
-        emailRedirectTo: `${window.location.origin}/auth-confirm`,
+        // Hardcode the redirect URL to the correct production site to fix 404 errors.
+        emailRedirectTo: `https://testerrrrr-alpha.vercel.app/auth-confirm`,
       },
     });
     if (error) {
@@ -67,7 +67,8 @@ const Login: React.FC = () => {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: `${window.location.origin}/auth-confirm`,
+        // Hardcode the redirect URL to the correct production site to fix 404 errors.
+        emailRedirectTo: `https://testerrrrr-alpha.vercel.app/auth-confirm`,
       },
     });
 
