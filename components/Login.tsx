@@ -42,6 +42,7 @@ const Login: React.FC = () => {
         data: {
           full_name: fullName,
         },
+        // Using a consistent path for all auth redirects. App.tsx handles both this and the Supabase default.
         emailRedirectTo: `${window.location.origin}/auth-confirm`,
       },
     });

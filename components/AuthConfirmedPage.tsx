@@ -10,7 +10,7 @@ const AuthConfirmedPage: React.FC = () => {
             <h1 className="text-2xl mb-2 text-slate-100 font-bold">{t('authConfirm.title')}</h1>
             <p className="text-slate-300 mb-8">{t('authConfirm.subtitle')}</p>
             <button 
-                onClick={() => window.location.href = '/'}
+                onClick={() => window.location.href = 'https://testerrrrr-alpha.vercel.app/'}
                 className="bg-indigo-500 border-none text-white py-3 px-6 rounded-lg cursor-pointer text-base font-medium transition-colors hover:bg-indigo-600"
             >
                 {t('authConfirm.button')}

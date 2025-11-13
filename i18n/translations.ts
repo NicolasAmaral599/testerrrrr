@@ -39,6 +39,11 @@ export const translations: Record<string, any> = {
         subtitle: 'Agora você pode acessar o site normalmente.',
         button: 'Voltar para o site',
     },
+    emailConfirm: {
+        title: 'Seu e-mail foi autenticado com sucesso!',
+        subtitle: 'Agora você já pode acessar o NotaFácil.',
+        button: 'Voltar para o site',
+    },
     dashboard: {
       title: 'Dashboard',
       totalBilled: 'Total Faturado',
@@ -254,6 +259,11 @@ export const translations: Record<string, any> = {
         title: 'Your email has been authenticated!',
         subtitle: 'You can now access the site normally.',
         button: 'Back to site',
+    },
+    emailConfirm: {
+        title: 'Your email has been successfully authenticated!',
+        subtitle: 'You can now access NotaFácil.',
+        button: 'Back to the site',
     },
     dashboard: {
       title: 'Dashboard',

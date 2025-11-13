@@ -33,7 +33,8 @@ const App: React.FC = () => {
   const [chatbotMessages, setChatbotMessages] = useState<Message[]>([]);
 
   useEffect(() => {
-    if (window.location.pathname === '/auth-confirm') {
+    // Handle both possible confirmation paths to be robust
+    if (window.location.pathname === '/auth-confirm' || window.location.pathname === '/email-confirmed') {
       setIsAuthConfirmPage(true);
     }
   }, []);
@@ -47,10 +48,10 @@ const App: React.FC = () => {
         data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
         setSession(session);
-        // If a session is established and we were on the auth confirm page,
-        // it means the user has successfully confirmed their email.
+        // If a session is established and we were on a confirmation page,
+        // it means the user has successfully confirmed.
         // We can now clean up the URL and show the main app.
-        if (session && window.location.pathname === '/auth-confirm') {
+        if (session && (window.location.pathname === '/auth-confirm' || window.location.pathname === '/email-confirmed')) {
           window.history.replaceState({}, document.title, '/');
           setIsAuthConfirmPage(false);
         }
